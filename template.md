@@ -11,13 +11,11 @@
   ;; inputs, outputs, workflow
   ;; is it just one function or more?
 
-
-```clojure
-   {:wheelman/type             :wheelman.objects/container
-    :wheelman/name             "nginx"
-    :wheelman.container/image  {wheelman.container/registry   "http://..."
-                                wheelman.container/image-name "nginx"
-                                wheelman.container/label    "1.14.2"}}
+{:wheelman/type             :wheelman.objects/container
+ :wheelman/name             "nginx"
+ :wheelman.container/image  {:wheelman.container/registry   "http://..."
+                             :wheelman.container/image-name "nginx"
+                             :wheelman.container/label      "1.14.2"}}
 ```
 
 

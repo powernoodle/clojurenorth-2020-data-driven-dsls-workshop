@@ -1,10 +1,8 @@
-# [ libname ]
+# [ Wheelman ]
 
-[ Libname ] is a Clojure(script) library for [ some task ].
-
-[ Some extra information if you'd like. ]
-
-<sup>(Protip: If you're having a hard time coming up with a name for your design, just do what Metosin does: pick the most matter-of-fact word to describe your library, but in Finnish instead of English).</sup>
+[ Wheelman ] is a Clojure(script) library for [ making k8s suck less ].
+ 
+ _"Think Fast. Drive Faster."_ 
 
 ## Quick Start
 
@@ -12,13 +10,25 @@
   ;; one or more examples of how someone would use libname
   ;; inputs, outputs, workflow
   ;; is it just one function or more?
+
+
+```clojure
+   {:wheelman/type             :wheelman.objects/container
+    :wheelman/name             "nginx"
+    :wheelman.container/image  {wheelman.container/registry   "http://..."
+                                wheelman.container/image-name "nginx"
+                                wheelman.container/label    "1.14.2"}}
 ```
 
 
-
-
-
-
+## Objectives
+- Get away from YAML
+  - avoid indentation problems because *nobody* likes significant whitespace
+  - allow for properly namespaced keys
+- Validate ahead of time
+  - highlight required fields
+  - allow for properly namespaced keys
+- DRY up your container stuff
 
 ## Limitations / Future Work
 
